@@ -1,12 +1,13 @@
 var count = 0;
-var result = document.getElementById('result');
+var result = document.getElementById("result");
 
-document.getElementById('btn').addEventListener('click', function() {
+document.getElementById("btn").addEventListener("click", function () {
   result.textContent = ++count;
-  history.pushState(count, null, '/js/chap07/count/' + count);
+  history.pushState(count, null, "/js/chap07/count/" + count);
 });
 
-window.addEventListener('popstate', function(e) {
+window.addEventListener("popstate", function (e) {
   count = e.state;
+  console.log(`count: ${count}`);
   result.textContent = count;
 });

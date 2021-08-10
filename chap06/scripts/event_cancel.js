@@ -7,7 +7,7 @@ document.addEventListener(
         window.alert("#innerリスナーが発生しました。");
         // e.stopPropagation();
         //e.stopImmediatePropagation();
-        e.preventDefault();
+        // e.preventDefault();
       },
       false
     );

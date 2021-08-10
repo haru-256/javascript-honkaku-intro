@@ -16,7 +16,22 @@ document.addEventListener(
       }
     };
 
+    var getSelectValue = function (name) {
+      var opts = document.getElementById(name);
+      let results = [];
+      for (var i = 0, len = opts.length; i < len; i++) {
+        var opt = opts.item(i);
+        if (opt.selected) {
+          results.push(opt.value);
+        }
+      }
+      return results;
+    };
+
     setListValue("food", ["餃子", "焼き肉"]);
+    document.getElementById("btn").addEventListener("click", function () {
+      window.alert(getSelectValue("food"));
+    });
   },
   false
 );
